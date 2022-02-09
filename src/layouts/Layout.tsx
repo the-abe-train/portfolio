@@ -39,7 +39,7 @@ export default function Layout({ page, children }: Props) {
       </header>
 
       <main className="flex-grow flex flex-col space-y-6 px-4">
-        <h1 className="text-5xl text-center my-4" style={style}>
+        <h1 className="text-5xl text-center mt-8 mb-4" style={style}>
           The Abe Train
         </h1>
         {children}

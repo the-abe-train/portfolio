@@ -20,7 +20,7 @@ export default function Project({
   url,
   repo,
 }: Props) {
-  const gatsbyImage = getImage(image);
+  const projectImage = getImage(image);
   return (
     <div className="flex justify-between">
       <div className="w-60 mb-4 flex flex-col space-y-3">
@@ -36,12 +36,14 @@ export default function Project({
         </div>
       </div>
       <a href={link}>
-        <div className="h-full w-28 relative">
-          <GatsbyImage
-            className="absolute right-0 top-1/2 transform -translate-y-1/2"
-            image={gatsbyImage}
-            alt={alt}
-          />
+        <div className="h-full w-28 relative drop-shadow-lg ">
+          {projectImage && (
+            <GatsbyImage
+              className="absolute right-0 top-1/2 transform -translate-y-1/2"
+              image={projectImage}
+              alt={alt}
+            />
+          )}
         </div>
       </a>
     </div>
