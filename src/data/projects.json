@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Globle",
+    "description": "Use your geography knowledge to figure out the mystery country in as few guesses as possbile!",
+    "image": "../images/globle.png",
+    "alt": "Globle",
+    "link": "https://globle-game.com"
+  },
+  {
+    "title": "Dynamic Gradients",
+    "description": "A tool for web developers to design and export dynamic gradients in CSS!",
+    "image": "../images/gradients.png",
+    "alt": "Dynamic Gradients",
+    "link": "https://dynamic-gradients.com"
+  },
+  {
+    "title": "Spotify Prewrapped",
+    "description": "Don't wait for Spotify Wrapped for insights into your favourite tracks and artists!",
+    "image": "../images/spotify.png",
+    "alt": "Spotify Prewrapped",
+    "link": "https://globle-game.com"
+  }
+]
