@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout";
 import "@fontsource/copse";
 import Portrait from "../components/Portrait";
 import Button from "../components/Button";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 export default function IndexPage() {
   return (
@@ -23,14 +23,18 @@ export default function IndexPage() {
         to new challenges, so let's connect!
       </p>
       <div className="flex space-x-5 justify-center">
-        <Button>
-          <b>Contact</b> <br />{" "}
-          <span className="text-sm">to hire or collab</span>
-        </Button>
-        <Button>
-          <b>Subscribe</b> <br />{" "}
-          <span className="text-sm">to to get updates</span>
-        </Button>
+        <Link to="/contact">
+          <Button>
+            <b>Contact</b> <br />{" "}
+            <span className="text-sm">to hire or collab</span>
+          </Button>
+        </Link>
+        <Link to="https://cdn.forms-content.sg-form.com/4f1973a2-5167-11ec-8c8b-2e7ccf1b28b5">
+          <Button>
+            <b>Subscribe</b> <br />{" "}
+            <span className="text-sm">to to get updates</span>
+          </Button>
+        </Link>
       </div>
     </Layout>
   );
