@@ -1,0 +1,18 @@
+.dynamic-gradient {
+  background: linear-gradient(90deg, #dbfdff, #e5dcff, #ffdbef);
+  background-size: 600% 600%;
+  animation: GradientAnimation 45s ease infinite;
+  @apply py-2 px-4 drop-shadow-lg;
+}
+
+@keyframes GradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

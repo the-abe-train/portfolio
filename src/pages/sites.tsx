@@ -1,9 +1,9 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../layouts/Layout";
 
 export default function SitesPage() {
   return (
-    <Layout>
+    <Layout page="Sites">
       <p>Coming soon!</p>
     </Layout>
   );

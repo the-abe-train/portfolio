@@ -1,12 +1,13 @@
 import * as React from "react";
-import Layout from "../components/Layout";
+import Layout from "../layouts/Layout";
 import "@fontsource/copse";
 import Portrait from "../components/Portrait";
 import Button from "../components/Button";
+import { graphql } from "gatsby";
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
-    <Layout>
+    <Layout page="Me">
       <p className="text-gray-900">Hey there! Thanks for visiting my site.</p>
       <Portrait />
       <p>
@@ -22,11 +23,28 @@ const IndexPage = () => {
         to new challenges, so let's connect!
       </p>
       <div className="flex space-x-5 justify-center">
-        <Button>Contact</Button>
-        <Button>Subscribe</Button>
+        <Button>
+          <b>Contact</b> <br />{" "}
+          <span className="text-sm">to hire or collab</span>
+        </Button>
+        <Button>
+          <b>Subscribe</b> <br />{" "}
+          <span className="text-sm">to to get updates</span>
+        </Button>
       </div>
     </Layout>
   );
-};
+}
 
-export default IndexPage;
+export const productsQuery = graphql`
+  query Metadata {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    file {
+      name
+    }
+  }
+`;

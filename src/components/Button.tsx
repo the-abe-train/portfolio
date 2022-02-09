@@ -1,5 +1,10 @@
 import React from "react";
+import { dynamicGradient } from "../lib/colours.module.css";
 
 export default function Button({ children }) {
-  return <button className="bg-red-100 p-4">{children}</button>;
+  return (
+    <button className={dynamicGradient} style={{ borderRadius: ".5rem" }}>
+      <div>{children}</div>
+    </button>
+  );
 }
