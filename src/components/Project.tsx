@@ -22,8 +22,8 @@ export default function Project({
 }: Props) {
   const projectImage = getImage(image);
   return (
-    <div className="flex justify-between">
-      <div className="w-60 mb-4 flex flex-col space-y-3">
+    <div className="flex justify-center">
+      <div className="w-60 sm:w-56 mb-4 flex flex-col space-y-3">
         <h3 className="text-2xl">{title}</h3>
         <p>{description}</p>
         <div className="flex space-x-4">
