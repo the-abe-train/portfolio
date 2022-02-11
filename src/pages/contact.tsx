@@ -44,7 +44,7 @@ export default function ContactPage() {
             <input
               type="text"
               name="name"
-              className=" block w-full mt-1 p-1 border-gray-300 rounded-md shadow-lg"
+              className=" block w-full mt-1 p-1 border-gray-300 rounded-md drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]"
               placeholder="The Joe Schmoe"
               value={name}
               onChange={(e) => setName(e.currentTarget.value)}
@@ -56,7 +56,7 @@ export default function ContactPage() {
             <input
               name="email"
               type="email"
-              className=" block w-full mt-1 p-1 border-gray-300 rounded-md shadow-lg"
+              className=" block w-full mt-1 p-1 border-gray-300 rounded-md drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]"
               placeholder="joe.schmoe@example.com"
               value={email}
               onChange={(e) => setEmail(e.currentTarget.value)}
@@ -67,7 +67,7 @@ export default function ContactPage() {
             <span className="text-gray-900">Message</span>
             <textarea
               name="message"
-              className="block w-full mt-1 p-1 border-gray-300 rounded-md shadow-lg"
+              className="block w-full mt-1 p-1 border-gray-300 rounded-md drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]"
               rows={3}
               placeholder="What's on your mind?"
               value={message}

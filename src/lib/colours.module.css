@@ -1,8 +1,8 @@
 .dynamic-gradient {
-  background: linear-gradient(-38deg, #dbfdff, #e5dcff, #ffdbef);
+  background: linear-gradient(-38deg, #c2fcff, #d1c2ff, #ffc2e3);
   background-size: 600% 600%;
   animation: GradientAnimation 45s ease infinite;
-  @apply z-10 drop-shadow-lg shadow-black;
+  @apply z-10 drop-shadow-[0_0_5px_rgba(0,0,0,0.5)];
 }
 
 @keyframes GradientAnimation {
