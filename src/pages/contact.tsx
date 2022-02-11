@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 import Layout from "../layouts/Layout";
 
@@ -32,15 +33,22 @@ export default function ContactPage() {
 
   return (
     <Layout page="Contact">
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <meta charSet="utf-8" />
+        <meta name="description" content="The Abe Train's portfolio website" />
+        <title>The Abe Train | Contact</title>
+        <link rel="canonical" href="http://the-abe-train.com/contact" />
+      </Helmet>
       <div className="max-w-sm sm:w-96 mx-auto sm:col-span-2">
         <p className="mb-8">
-          Use this form to send me any message about anything, from feature
-          requests on my projects, to collaboration opportunities, to how you're
-          feeling today. I love to hear from people and I read every message.
+          Use this form to send me a message. It can be about anything, from
+          feature requests on my projects, to collaboration opportunities, to
+          how you're feeling today. I love to hear from people and I read every
+          message!
         </p>
         <form onSubmit={submitForm}>
           <label className="block mb-6">
-            <span className="text-gray-900">Your name</span>
+            <span>Your name</span>
             <input
               type="text"
               name="name"
@@ -52,7 +60,7 @@ export default function ContactPage() {
             />
           </label>
           <label className="block mb-6">
-            <span className="text-gray-900">Email address</span>
+            <span>Email address</span>
             <input
               name="email"
               type="email"
@@ -64,7 +72,7 @@ export default function ContactPage() {
             />
           </label>
           <label className="block mb-6">
-            <span className="text-gray-900">Message</span>
+            <span>Message</span>
             <textarea
               name="message"
               className="block w-full mt-1 p-1 border-gray-300 rounded-md drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]"

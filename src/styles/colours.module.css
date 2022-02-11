@@ -5,6 +5,13 @@
   @apply z-10 drop-shadow-[0_0_5px_rgba(0,0,0,0.5)];
 }
 
+.dark-gradient {
+  background: linear-gradient(-38deg, #003d40, #100040, #400023);
+  background-size: 600% 600%;
+  animation: GradientAnimation 45s ease infinite;
+  @apply z-10 drop-shadow-[0_0_5px_rgba(200,200,200,0.3)];
+}
+
 @keyframes GradientAnimation {
   0% {
     background-position: 0% 0%;

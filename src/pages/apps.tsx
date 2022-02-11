@@ -3,6 +3,7 @@ import React from "react";
 import Layout from "../layouts/Layout";
 import Project from "../components/Project";
 import { ImageDataLike } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
 
 type Node = {
   id: string;
@@ -25,6 +26,12 @@ export default function AppsPage({ data }: PageProps<DataProps>) {
   const { nodes } = data.allProjectsJson;
   return (
     <Layout page="Apps">
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <meta charSet="utf-8" />
+        <meta name="description" content="The Abe Train's portfolio website" />
+        <title>The Abe Train | Apps</title>
+        <link rel="canonical" href="http://the-abe-train.com/apps" />
+      </Helmet>
       {nodes.map((project: Node) => {
         const { id, title, description, image, alt, url, repo } = project;
         return (

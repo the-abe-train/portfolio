@@ -4,13 +4,18 @@ import "@fontsource/copse";
 import Portrait from "../components/Portrait";
 import Button from "../components/Button";
 import { graphql, Link } from "gatsby";
+import { Helmet } from "react-helmet";
 
 export default function IndexPage() {
   return (
     <Layout page="Me">
-      <p className="text-gray-900 sm:self-end">
-        Hey there! Thanks for visiting my site.
-      </p>
+      <Helmet htmlAttributes={{ lang: "en" }}>
+        <meta charSet="utf-8" />
+        <meta name="description" content="The Abe Train's portfolio website" />
+        <title>The Abe Train</title>
+        <link rel="canonical" href="http://the-abe-train.com/" />
+      </Helmet>
+      <p className="sm:self-end">Hey there! Thanks for visiting my site.</p>
       <div className="sm:row-span-3 sm:self-center">
         <Portrait />
       </div>
@@ -27,13 +32,16 @@ export default function IndexPage() {
         to new challenges, so let's connect!
       </p>
       <div className="flex space-x-5 justify-center">
-        <Link to="/contact">
+        <Link to="/contact" tabIndex={-1}>
           <Button>
             <b>Contact</b> <br />{" "}
             <span className="text-sm">to hire or collab</span>
           </Button>
         </Link>
-        <Link to="https://cdn.forms-content.sg-form.com/4f1973a2-5167-11ec-8c8b-2e7ccf1b28b5">
+        <Link
+          tabIndex={-1}
+          to="https://cdn.forms-content.sg-form.com/4f1973a2-5167-11ec-8c8b-2e7ccf1b28b5"
+        >
           <Button>
             <b>Subscribe</b> <br />{" "}
             <span className="text-sm">to to get updates</span>

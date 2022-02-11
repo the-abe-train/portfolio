@@ -1,0 +1,9 @@
+.light-background {
+  background: url("../images/backgroundLight.svg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.dark-background {
+  background: url("../images/backgroundDark.svg") no-repeat;
+  background-size: 100% 100%;
+}

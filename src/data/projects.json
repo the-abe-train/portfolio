@@ -1,7 +1,7 @@
 [
   {
     "title": "Globle",
-    "description": "Use your geography knowledge to figure out the mystery country in as few guesses as possbile!",
+    "description": "A geography game. Try to figure out the mystery country in as few guesses as possbile!",
     "image": "../images/globle.png",
     "alt": "Globle",
     "url": "https://globle-game.com",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Dynamic Gradients",
-    "description": "A tool for web developers to design and export dynamic gradients in CSS!",
+    "description": "A tool for web developers. Use dials and switches to design and export dynamic gradients in CSS!",
     "image": "../images/gradients.png",
     "alt": "Dynamic Gradients",
     "url": "https://dynamicgradients.com",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Spotify Prewrapped",
-    "description": "Don't wait for Spotify Wrapped for insights into your favourite tracks and artists!",
+    "description": "A web app for Spotify users. Don't wait until the end of the year for insights into your favourite tracks and artists!",
     "image": "../images/spotify.png",
     "alt": "Spotify Prewrapped",
     "url": "https://spotify-prewrapped.vercel.app/",

@@ -1,47 +1,58 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, ReactNode, useEffect, useState } from "react";
+import useIsBrowser from "../hooks/useIsBrowser";
+import useLocalStorage from "../hooks/useLocalStorage";
 
-const themes = {
-  dark: {
-    backgroundColor: "black",
-    color: "white",
-  },
-  light: {
-    backgroundColor: "white",
-    color: "black",
-  },
+// Use context as follows:
+// ThemeProvider > ThemeContext > themeContext > theme & setTheme
+
+type ProviderProps = {
+  children: ReactNode;
 };
 
-const initialState = {
-  dark: false,
-  theme: themes.light,
-  toggle: () => {},
+type Theme = {
+  darkMode: boolean;
 };
-const ThemeContext = createContext(initialState);
 
-function ThemeProvider({ children }: any) {
-  const [dark, setDark] = useState(false); // Default theme is light
+type ThemeContextType = {
+  theme: Theme;
+  setTheme: React.Dispatch<React.SetStateAction<Theme>> | null;
+};
 
-  // On mount, read the preferred theme from the persistence
+let initialTheme: Theme = { darkMode: false };
+
+const initialThemeContext: ThemeContextType = {
+  theme: initialTheme,
+  setTheme: null,
+};
+
+export const ThemeContext =
+  createContext<ThemeContextType>(initialThemeContext);
+
+export const ThemeProvider = ({ children }: ProviderProps) => {
+  const isBrowser = useIsBrowser();
+  if (isBrowser) {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      initialTheme = { darkMode: true };
+    }
+  }
+
+  const [storedTheme, storeTheme] = useLocalStorage<Theme>(
+    "theme",
+    initialTheme
+  );
+
+  const [theme, setTheme] = useState(storedTheme);
+
   useEffect(() => {
-    const isDark = localStorage.getItem("dark") === "true";
-    setDark(isDark);
-  }, [dark]);
-
-  // To toggle between dark and light modes
-  const toggle = () => {
-    const isDark = !dark;
-    localStorage.setItem("dark", JSON.stringify(isDark));
-    setDark(isDark);
-  };
-
-  // Filter the styles based on the theme selected
-  const theme = dark ? themes.dark : themes.light;
+    storeTheme(theme);
+  }, [storeTheme, theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, dark, toggle }}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-}
-
-export { ThemeProvider, ThemeContext };
+};
