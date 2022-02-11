@@ -1,12 +1,8 @@
-import { Link } from "gatsby";
-import React, { CSSProperties } from "react";
-import twitter from "../images/twitter.svg";
-import github from "../images/github.svg";
-import linkedin from "../images/linkedin.svg";
-import reddit from "../images/reddit.svg";
-// import Background from "./Background";
+import React, { CSSProperties, useContext } from "react";
 import svgBg from "../images/background.svg";
-import { dynamicGradient } from "../lib/colours.module.css";
+import { ThemeContext } from "../context/ThemeContext";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 type Props = {
   page: string;
@@ -22,26 +18,12 @@ const bgStyle: CSSProperties = {
   backgroundSize: "100% 100%",
 };
 
-// const headerStyle: CSSProperties = {
-//   padding: "0.5rem 1rem"
-// }
-
 export default function Layout({ page, children }: Props) {
-  const pageName = (name: string) => (page === name ? <b>{name}</b> : name);
+  const { theme, toggle, dark } = useContext(ThemeContext);
+  console.log(theme);
   return (
     <div className="absolute w-full top-0 bottom-0 flex flex-col">
-      <header
-        className={`${dynamicGradient} py-2 px-4`}
-        // style={{ boxShadow: "30px 30px black" }}
-      >
-        <nav className="flex w-full sm:max-w-sm sm:mx-auto justify-around text-lg">
-          <Link to="/">{pageName("Me")}</Link>
-          <Link to="/apps">{pageName("Apps")}</Link>
-          <Link to="/sites">{pageName("Sites")}</Link>
-          <Link to="/blog">{pageName("Blog")}</Link>
-        </nav>
-      </header>
-
+      <Header page={page} />
       <main style={bgStyle} className="flex-grow relative">
         <div
           className="flex flex-col space-y-6 px-4 h-full
@@ -55,32 +37,9 @@ export default function Layout({ page, children }: Props) {
             The Abe Train
           </h1>
           {children}
-          <footer
-            className="w-full h-16 clear-both order-last flex-grow relative
-          sm:max-w-sm sm:mx-auto sm:col-span-2"
-          >
-            <nav
-              className="flex w-full justify-around text-lg absolute bottom-0 py-4
-            sm:max-w-sm sm:mx-auto "
-            >
-              <a href="https://twitter.com/theAbeTrain">
-                <img src={twitter} alt="Twitter" />
-              </a>
-              <a href="https://github.com/the-abe-train">
-                <img src={github} alt="GitHub" />
-              </a>
-              <a href="https://www.linkedin.com/in/abe-train-81418714b/">
-                <img src={linkedin} alt="LinkedIn" />
-              </a>
-              <a href="https://www.reddit.com/user/AsteroidSvelte">
-                <img src={reddit} alt="Reddit" />
-              </a>
-            </nav>
-          </footer>
+          <Footer />
         </div>
       </main>
-      {/* <footer className="absolute bottom-0 w-full clear-both -mt-4 order-last py-2"> */}
-      {/* <Background /> */}
     </div>
   );
 }
