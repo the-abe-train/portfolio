@@ -1,7 +1,7 @@
 import { GatsbyImage, getImage, ImageDataLike } from "gatsby-plugin-image";
 import React from "react";
-import github from "../images/github.svg";
-import link from "../images/link.svg";
+// import GitHub from "../images/github.svg";
+// import Link from "../images/link.svg";
 
 type Props = {
   title: string;
@@ -38,12 +38,15 @@ export default function Project({
         </h3>
         <p>{description}</p>
         <div className="flex space-x-4">
-          <a href={repo}>
+          {/* <GitHub />
+          <Link /> */}
+          {/* <a href={repo}>
             <img width={20} src={github} alt="GitHub" />
           </a>
           <a href={url}>
             <img width={20} src={link} alt="Link" />
           </a>
+          <Svg /> */}
         </div>
       </div>
       <a href={url}>

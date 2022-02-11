@@ -1,5 +1,5 @@
 import React from "react";
-import { dynamicGradient } from "../lib/colours.module.css";
+import { dynamicGradient } from "../styles/colours.module.css";
 
 export default function Button({ children }: any) {
   return (

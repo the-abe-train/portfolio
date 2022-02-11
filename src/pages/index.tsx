@@ -8,9 +8,7 @@ import { graphql, Link } from "gatsby";
 export default function IndexPage() {
   return (
     <Layout page="Me">
-      <p className="text-gray-900 sm:self-end">
-        Hey there! Thanks for visiting my site.
-      </p>
+      <p className="sm:self-end">Hey there! Thanks for visiting my site.</p>
       <div className="sm:row-span-3 sm:self-center">
         <Portrait />
       </div>

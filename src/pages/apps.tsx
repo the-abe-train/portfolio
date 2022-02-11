@@ -21,24 +21,24 @@ type DataProps = {
 };
 
 export default function AppsPage({ data }: PageProps<DataProps>) {
-  // console.log(allProjectsJson);
   const { nodes } = data.allProjectsJson;
   return (
     <Layout page="Apps">
-      {nodes.map((project: Node) => {
+      {/* {nodes.map((project: Node) => {
         const { id, title, description, image, alt, url, repo } = project;
         return (
-          <Project
-            key={id}
-            title={title}
-            description={description}
-            image={image}
-            alt={alt}
-            url={url}
-            repo={repo}
-          />
+          <div></div>
+          // <Project
+          //   key={id}
+          //   title={title}
+          //   description={description}
+          //   image={image}
+          //   alt={alt}
+          //   url={url}
+          //   repo={repo}
+          // />
         );
-      })}
+      })} */}
     </Layout>
   );
 }

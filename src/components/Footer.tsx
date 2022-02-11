@@ -1,10 +1,19 @@
-import React from "react";
-import twitter from "../images/twitter.svg";
-import github from "../images/github.svg";
-import linkedin from "../images/linkedin.svg";
-import reddit from "../images/reddit.svg";
+import React, { useContext } from "react";
+import { ReactComponent as Twitter } from "../images/twitter.svg";
 
+import { ReactComponent as GitHub } from "../images/github.svg";
+import { ReactComponent as LinkedIn } from "../images/linkedin.svg";
+import { ReactComponent as Reddit } from "../images/reddit.svg";
+import { ThemeContext } from "../context/ThemeContext";
 export default function Footer() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  function toggleTheme() {
+    if (setTheme) {
+      setTheme({ darkMode: !theme.darkMode });
+    }
+  }
+
   return (
     <footer
       className="w-full h-16 clear-both order-last flex-grow relative
@@ -14,7 +23,11 @@ export default function Footer() {
         className="flex w-full justify-around text-lg absolute bottom-0 py-4
     sm:max-w-sm sm:mx-auto "
       >
-        <a href="https://twitter.com/theAbeTrain">
+        <Twitter fill="pink" />
+        <GitHub fill="pink" />
+        <LinkedIn fill="pink" />
+        <Reddit fill="pink" />
+        {/* <a href="https://twitter.com/theAbeTrain">
           <img src={twitter} alt="Twitter" />
         </a>
         <a href="https://github.com/the-abe-train">
@@ -25,7 +38,8 @@ export default function Footer() {
         </a>
         <a href="https://www.reddit.com/user/AsteroidSvelte">
           <img src={reddit} alt="Reddit" />
-        </a>
+        </a> */}
+        <button onClick={toggleTheme}>Theme</button>
       </nav>
     </footer>
   );
