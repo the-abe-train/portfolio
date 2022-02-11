@@ -22,11 +22,18 @@ const bgStyle: CSSProperties = {
   backgroundSize: "100% 100%",
 };
 
+// const headerStyle: CSSProperties = {
+//   padding: "0.5rem 1rem"
+// }
+
 export default function Layout({ page, children }: Props) {
   const pageName = (name: string) => (page === name ? <b>{name}</b> : name);
   return (
     <div className="absolute w-full top-0 bottom-0 flex flex-col">
-      <header className={dynamicGradient}>
+      <header
+        className={`${dynamicGradient} py-2 px-4`}
+        // style={{ boxShadow: "30px 30px black" }}
+      >
         <nav className="flex w-full sm:max-w-sm sm:mx-auto justify-around text-lg">
           <Link to="/">{pageName("Me")}</Link>
           <Link to="/apps">{pageName("Apps")}</Link>
@@ -35,13 +42,14 @@ export default function Layout({ page, children }: Props) {
         </nav>
       </header>
 
-      <main style={bgStyle} className="flex-grow">
+      <main style={bgStyle} className="flex-grow relative">
         <div
           className="flex flex-col space-y-6 px-4 h-full
-        sm:grid sm:grid-cols-2 sm:max-w-3xl sm:mx-auto sm:my-auto sm:gap-x-4"
+        sm:h-min  sm:grid sm:grid-cols-2 sm:auto-rows-min sm:max-w-3xl sm:mx-auto sm:gap-x-4
+        2xl:relative 2xl:absoulte 2xl:top-1/2 2xl:-translate-y-2/3"
         >
           <h1
-            className="text-5xl text-center mt-8 mb-4 sm:col-span-2"
+            className="text-5xl text-center mt-8 mb-4 sm:col-span-2 sm:self-end"
             style={style}
           >
             The Abe Train
