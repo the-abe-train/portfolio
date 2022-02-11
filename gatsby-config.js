@@ -43,6 +43,18 @@ module.exports = {
         ],
         display: 'swap'
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: 'Train Icon',
+        short_name: 'trainIco',
+        start_url: '/',
+        // background_color: '#f7f0eb',
+        theme_color: '#E5DCFF',
+        display: 'standalone',
+        icon: 'src/images/favicon.png',
+      },
     }
   ]
 };
