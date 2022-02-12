@@ -44,7 +44,7 @@ export default function IndexPage() {
         >
           <Button>
             <b>Subscribe</b> <br />{" "}
-            <span className="text-sm">to to get updates</span>
+            <span className="text-sm">to get updates</span>
           </Button>
         </Link>
       </div>
