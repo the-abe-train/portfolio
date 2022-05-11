@@ -1,6 +1,6 @@
 import { graphql, PageProps } from "gatsby";
 import React from "react";
-import Layout from "../layouts/Layout";
+import Layout from "../layouts/GridLayout";
 import Project from "../components/Project";
 import { ImageDataLike } from "gatsby-plugin-image";
 import { Helmet } from "react-helmet";

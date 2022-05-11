@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from "react";
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
-import Layout from "../layouts/Layout";
+import Layout from "../layouts/GridLayout";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -72,12 +72,12 @@ export default function ContactPage() {
             />
           </label>
           <label className="block mb-6">
-            <span>Message</span>
+            <span>Your message</span>
             <textarea
               name="message"
               className="block w-full mt-1 p-1 border-gray-300 rounded-md drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]"
               rows={3}
-              placeholder="What's on your mind?"
+              placeholder="Please be polite with your message :)"
               value={message}
               onChange={(e) => setMessage(e.currentTarget.value)}
               required

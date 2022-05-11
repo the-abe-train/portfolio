@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../layouts/Layout";
+import Layout from "../layouts/GridLayout";
 import "@fontsource/copse";
 import Portrait from "../components/Portrait";
 import Button from "../components/Button";
