@@ -1,5 +1,13 @@
 [
   {
+    "title": "Plurality",
+    "description": "A Web3 guessing game. How well do you know the most common opinions on the internet?",
+    "image": "../images/plurality.png",
+    "alt": "Plurality",
+    "url": "https://plurality.fun",
+    "repo": "https://github.com/the-abe-train/plurality"
+  },
+  {
     "title": "Genitle",
     "description": "The classic daily guessing game with a sex-ed theme! Made to promote sexual literacy, as well as the film A Sexplanation.",
     "image": "../images/apple.png",
