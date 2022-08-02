@@ -46,7 +46,7 @@ export default function Project({
       <a href={url}>
         <div
           className="h-full w-28 relative 
-        drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]
+        drop-shadow-[0_0_3px_rgba(0,0,0,0.4)]
         dark:drop-shadow-[0_0_5px_rgba(200,200,200,0.3)]"
         >
           {projectImage && (

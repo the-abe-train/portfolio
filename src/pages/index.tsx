@@ -27,9 +27,14 @@ export default function IndexPage() {
         >
           cloud-certified
         </a>{" "}
-        <b>Full-stack Web Developer</b>. I design and develop web sites and apps
-        from the ground up to reach people all over the world. I'm always open
-        to new challenges, so let's connect!
+        <b>Full-stack Web Developer</b>. I'm best known for building web games
+        that are played by hundreds of thousands of people around the world
+        every day, including Globle and Plurality. I've also done freelance
+        projects to poromote indpendent films and small businesses.
+      </p>
+      <p>
+        Looking for a freelancer to build your website, or a technical
+        co-founder for you startup? Let's connect!
       </p>
       <div className="flex space-x-5 justify-center">
         <Link to="/contact" tabIndex={-1}>
