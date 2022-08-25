@@ -17,6 +17,27 @@ export default function MediaPage() {
         <section className="space-y-2">
           <h2 className="font-header text-2xl">Globle in the news</h2>
           <a
+            href="https://thecjn.ca/podcasts/meet-the-canadian-behind-globle-the-webs-hot-new-geography-game/"
+            className="inline-block w-full"
+          >
+            <article className="bg-[#F5FEFF] dark:bg-[#002123] p-4 border rounded-md flex items-center shadow-md">
+              <StaticImage
+                src="../images/cjn.jpg"
+                alt="The CJN Daily"
+                width={125}
+                height={125}
+                className="hidden md:block"
+              />
+              <div className="ml-4 mb">
+                <h3 className="text-xl mb-2">
+                  Meet the Canadian behind Globle, the web’s hot new geography
+                  game
+                </h3>
+                <p>With Ellin Bessner, The CJN Daily, 4 August 2022</p>
+              </div>
+            </article>
+          </a>
+          <a
             href="https://www.latimes.com/entertainment-arts/story/2022-04-14/la-ent-globle-geography"
             className="inline-block w-full"
           >
