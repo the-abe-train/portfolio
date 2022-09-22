@@ -12,10 +12,6 @@ type Props = {
   children: any;
 };
 
-const style = {
-  fontFamily: "Copse",
-};
-
 export default function Layout({ page, children }: Props) {
   const { theme } = useContext(ThemeContext);
   const dark = theme.darkMode ? "dark" : "";

@@ -18,9 +18,9 @@ export default function Header({ page }: Props) {
     >
       <nav className="flex w-full sm:max-w-sm sm:mx-auto justify-around text-lg">
         <Link to="/">{pageName("Me")}</Link>
+        <Link to="/games">{pageName("Games")}</Link>
         <Link to="/apps">{pageName("Apps")}</Link>
         <Link to="/media">{pageName("Media")}</Link>
-        <Link to="/blog">{pageName("Blog")}</Link>
       </nav>
     </header>
   );

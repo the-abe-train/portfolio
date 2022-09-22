@@ -1,11 +1,21 @@
 [
   {
+    "title": "Globle",
+    "description": "A geography game. Try to figure out the mystery country in as few guesses as possible!",
+    "image": "../images/globle.png",
+    "alt": "Globle",
+    "url": "https://globle-game.com",
+    "repo": "https://github.com/the-abe-train/globle",
+    "type": "game"
+  },
+  {
     "title": "Plurality",
     "description": "A Web3 guessing game. How well do you know the most common opinions on the internet?",
     "image": "../images/plurality.png",
     "alt": "Plurality",
     "url": "https://plurality.fun",
-    "repo": "https://github.com/the-abe-train/plurality"
+    "repo": "https://github.com/the-abe-train/plurality",
+    "type": "game"
   },
   {
     "title": "Genitle",
@@ -13,23 +23,18 @@
     "image": "../images/apple.png",
     "alt": "Genitle",
     "url": "https://genitle.herraproductions.com",
-    "repo": "https://github.com/the-abe-train/sexplanation-game"
+    "repo": "https://github.com/the-abe-train/sexplanation-game",
+    "type": "game"
   },
+
   {
-    "title": "Globle",
-    "description": "A geography game. Try to figure out the mystery country in as few guesses as possible!",
-    "image": "../images/globle.png",
-    "alt": "Globle",
-    "url": "https://globle-game.com",
-    "repo": "https://github.com/the-abe-train/globle"
-  },
-  {
-    "title": "Dynamic Gradients",
-    "description": "A tool for web developers. Use dials and switches to design and export dynamic gradients in CSS!",
-    "image": "../images/gradients.png",
-    "alt": "Dynamic Gradients",
-    "url": "https://dynamicgradients.com",
-    "repo": "https://github.com/the-abe-train/dynamic-gradient"
+    "title": "Motzash",
+    "description": "A is your dashboard companion for Jewish holidays with practical widgets and a social network.",
+    "image": "../images/motzash.png",
+    "alt": "Motzash",
+    "url": "https://motzash.app/",
+    "repo": "https://github.com/the-abe-train/motzash",
+    "type": "app"
   },
   {
     "title": "Spotify Prewrapped",
@@ -37,6 +42,16 @@
     "image": "../images/spotify.png",
     "alt": "Spotify Prewrapped",
     "url": "https://spotify-prewrapped.vercel.app/",
-    "repo": "https://github.com/the-abe-train/spotify-prewrapped"
+    "repo": "https://github.com/the-abe-train/spotify-prewrapped",
+    "type": "app"
+  },
+  {
+    "title": "Dynamic Gradients",
+    "description": "A tool for web developers. Use dials and switches to design and export dynamic gradients in CSS!",
+    "image": "../images/gradients.png",
+    "alt": "Dynamic Gradients",
+    "url": "https://dynamicgradients.com",
+    "repo": "https://github.com/the-abe-train/dynamic-gradient",
+    "type": "app"
   }
 ]

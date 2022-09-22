@@ -21,16 +21,16 @@ type DataProps = {
   };
 };
 
-export default function AppsPage({ data }: PageProps<DataProps>) {
+export default function GamesPage({ data }: PageProps<DataProps>) {
   // console.log(allProjectsJson);
   const { nodes } = data.allProjectsJson;
   return (
-    <Layout page="Apps">
+    <Layout page="Games">
       <Helmet htmlAttributes={{ lang: "en" }}>
         <meta charSet="utf-8" />
         <meta name="description" content="The Abe Train's portfolio website" />
-        <title>The Abe Train | Apps</title>
-        <link rel="canonical" href="http://the-abe-train.com/apps" />
+        <title>The Abe Train | Games</title>
+        <link rel="canonical" href="http://the-abe-train.com/games" />
       </Helmet>
       {nodes.map((project: Node) => {
         const { id, title, description, image, alt, url, repo } = project;
@@ -51,8 +51,8 @@ export default function AppsPage({ data }: PageProps<DataProps>) {
 }
 
 export const productsQuery = graphql`
-  query JsonQuery {
-    allProjectsJson(filter: { type: { eq: "app" } }) {
+  query GamesQuery {
+    allProjectsJson(filter: { type: { eq: "game" } }) {
       nodes {
         id
         image {
